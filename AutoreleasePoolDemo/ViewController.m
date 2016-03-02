@@ -8,6 +8,14 @@
 
 #import "ViewController.h"
 
+@interface A : NSObject
+@property(nonatomic,retain) NSString *name;
+@end
+
+@implementation A
+
+@end
+
 @interface ViewController ()
 
 @end
@@ -17,6 +25,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    A *a = [[A alloc] init];
+    [[a autorelease] autorelease];
+    
 }
 
 - (void)didReceiveMemoryWarning {
