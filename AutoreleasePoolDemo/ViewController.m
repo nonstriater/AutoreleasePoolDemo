@@ -26,8 +26,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    A *a = [[A alloc] init];
-    [[a autorelease] autorelease];
+//    A *a = [[A alloc] init];
+//    [[a autorelease] autorelease];
+    
+    
+    //不会崩溃
+    NSString *str = [[[[NSString alloc]init]autorelease]autorelease];
+   // str = @"hii";
+    NSLog(@"%@",str);
+    
+    NSString *str2 = [[NSString alloc] initWithString:@"123"];
+    [[str2 autorelease] autorelease];
     
 }
 
